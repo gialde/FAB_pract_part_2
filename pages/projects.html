@@ -33,64 +33,72 @@
                 
                 <div class="filter-buttons">
                     <button class="filter-btn active" data-filter="all">Все</button>
-                    <button class="filter-btn" data-filter="html">HTML</button>
+                    <button class="filter-btn" data-filter="web">Веб-разработка</button>
                     <button class="filter-btn" data-filter="js">JavaScript</button>
                     <button class="filter-btn" data-filter="react">React</button>
                 </div>
 
                 <div class="projects-area">
-                    <div class="projects-grid-full">
-                        <div class="project-card-full" data-category="html">
-                            <div class="project-image"></div>
-                            <h3>Личный сайт</h3>
-                            <p class="project-tech">HTML, CSS</p>
-                            <button class="project-details-btn">Подробнее</button>
-                        </div>
+                    <div class="projects-gallery">
+                        <article class="project-card" data-category="web">
+                            <div class="project-image-container">
+                                <div class="project-image-placeholder">
+                                    <span>Личный сайт</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Личный сайт</h3>
+                                <p class="project-tech">HTML, CSS, JavaScript</p>
+                                <p class="project-description">Адаптивный личный сайт-портфолио с современным дизайном и анимациями</p>
+                                <button class="btn project-details-btn">Подробнее</button>
+                            </div>
+                        </article>
 
-                        <div class="project-card-full" data-category="js">
-                            <div class="project-image"></div>
-                            <h3>Todo-приложение</h3>
-                            <p class="project-tech">JavaScript</p>
-                            <button class="project-details-btn">Подробнее</button>
-                        </div>
+                        <article class="project-card" data-category="js">
+                            <div class="project-image-container">
+                                <div class="project-image-placeholder">
+                                    <span>Todo App</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Todo-приложение</h3>
+                                <p class="project-tech">JavaScript, LocalStorage</p>
+                                <p class="project-description">Интерактивное приложение для управления задачами с сохранением данных</p>
+                                <button class="btn project-details-btn">Подробнее</button>
+                            </div>
+                        </article>
 
-                        <div class="project-card-full" data-category="react">
-                            <div class="project-image"></div>
-                            <h3>Интернет-магазин</h3>
-                            <p class="project-tech">React</p>
-                            <button class="project-details-btn">Подробнее</button>
-                        </div>
+                        <article class="project-card" data-category="react">
+                            <div class="project-image-container">
+                                <div class="project-image-placeholder">
+                                    <span>Интернет-магазин</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Интернет-магазин</h3>
+                                <p class="project-tech">React, Node.js, MongoDB</p>
+                                <p class="project-description">Полнофункциональный интернет-магазин с корзиной и системой заказов</p>
+                                <button class="btn project-details-btn">Подробнее</button>
+                            </div>
+                        </article>
 
-                        <div class="project-card-full" data-category="html">
-                            <div class="project-image"></div>
-                            <h3>Портфолио</h3>
-                            <p class="project-tech">Bootstrap</p>
-                            <button class="project-details-btn">Подробнее</button>
-                        </div>
+                        <article class="project-card" data-category="web">
+                            <div class="project-image-container">
+                                <div class="project-image-placeholder">
+                                    <span>Портфолио</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 class="project-title">Портфолио</h3>
+                                <p class="project-tech">Bootstrap, Sass, JavaScript</p>
+                                <p class="project-description">Креативное портфолио с современными анимациями и адаптивным дизайном</p>
+                                <button class="btn project-details-btn">Подробнее</button>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Модальное окно -->
-        <div id="projectModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2 id="modalTitle">Название проекта</h2>
-                <div class="modal-body">
-                    <div class="modal-images">
-                        <div class="modal-image"></div>
-                    </div>
-                    <div class="modal-info">
-                        <p id="modalDescription">Описание проекта</p>
-                        <div class="modal-links">
-                            <a href="#" class="btn" id="liveLink">Живая версия</a>
-                            <a href="#" class="btn" id="codeLink">Исходный код</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </main>
 
     <footer class="footer">

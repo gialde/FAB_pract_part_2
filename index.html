@@ -12,7 +12,11 @@
     <header class="nav">
         <div class="container">
             <div class="logo">
-                W
+                <picture>
+                    <source srcset="images/logo.webp" type="image/webp">
+                    <source srcset="images/logo.png" type="image/png">
+                    <img src="images/logo.png" alt="Логотип" width="40" height="40" class="logo-img">
+                </picture>
                 <span>Кондратенко Денис</span>
             </div>
             <nav aria-label="Основная навигация">
@@ -36,9 +40,17 @@
                 </div>
                 <div class="hero-image">
                     <picture>
-                        <source type="image/avif" srcset="images/hero-150.avif 150w, images/hero-200.avif 200w, images/hero-300.avif 300w" sizes="200px">
-                        <source type="image/webp" srcset="images/hero-150.webp 150w, images/hero-200.webp 200w, images/hero-300.webp 300w" sizes="200px">
-                        <img class="hero-photo" src="images/hero-200.jpg" srcset="images/hero-150.jpg 150w, images/hero-200.jpg 200w, images/hero-300.jpg 300w" sizes="200px" width="200" height="200" alt="Портрет студента" fetchpriority="high">
+                        <source media="(min-width: 1200px)" srcset="images/hero-desktop.webp" type="image/webp">
+                        <source media="(min-width: 768px)" srcset="images/hero-tablet.webp" type="image/webp">
+                        <source srcset="images/hero-mobile.webp" type="image/webp">
+                        <source media="(min-width: 1200px)" srcset="images/hero-desktop.jpg">
+                        <source media="(min-width: 768px)" srcset="images/hero-tablet.jpg">
+                        <img src="images/hero-mobile.jpg" 
+                             alt="Портрет Кондратенко Денис" 
+                             class="hero-photo"
+                             width="300" height="300"
+                             loading="eager"
+                             fetchpriority="high">
                     </picture>
                 </div>
             </div>
@@ -70,9 +82,27 @@
             <div class="container">
                 <h2 class="section-title">Лучшие проекты</h2>
                 <div class="projects-preview-grid">
-                    <div class="project-card">П1</div>
-                    <div class="project-card">П2</div>
-                    <div class="project-card">П3</div>
+                    <div class="project-card">
+                        <picture>
+                            <source srcset="images/project1.webp" type="image/webp">
+                            <img src="images/project1.jpg" alt="Проект 1" class="project-img" loading="lazy">
+                        </picture>
+                        <h3>Личный сайт</h3>
+                    </div>
+                    <div class="project-card">
+                        <picture>
+                            <source srcset="images/project2.webp" type="image/webp">
+                            <img src="images/project2.jpg" alt="Проект 2" class="project-img" loading="lazy">
+                        </picture>
+                        <h3>Todo-приложение</h3>
+                    </div>
+                    <div class="project-card">
+                        <picture>
+                            <source srcset="images/project3.webp" type="image/webp">
+                            <img src="images/project3.jpg" alt="Проект 3" class="project-img" loading="lazy">
+                        </picture>
+                        <h3>Интернет-магазин</h3>
+                    </div>
                 </div>
             </div>
         </section>

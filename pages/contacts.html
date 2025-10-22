@@ -35,40 +35,46 @@
                     <form class="contact-form" id="contactForm">
                         <div class="form-group">
                             <label for="name">Имя:</label>
-                            <input type="text" id="name" name="name" required aria-describedby="name-hint">
-                            <small id="name-hint" class="visually-hidden">Введите ваше полное имя</small>
+                            <input type="text" id="name" name="name" required 
+                                   aria-describedby="name-hint"
+                                   placeholder="Введите ваше имя">
+                            <small id="name-hint" class="form-hint">Минимум 2 символа</small>
                             <span class="error-message" id="nameError"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required aria-describedby="email-hint">
-                            <small id="email-hint" class="visually-hidden">Мы пришлём ответ на этот адрес</small>
+                            <input type="email" id="email" name="email" required
+                                   aria-describedby="email-hint"
+                                   placeholder="example@mail.ru">
+                            <small id="email-hint" class="form-hint">Мы пришлём ответ на этот адрес</small>
                             <span class="error-message" id="emailError"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="message">Сообщение:</label>
-                            <textarea id="message" name="message" rows="5" required aria-describedby="message-hint"></textarea>
-                            <small id="message-hint" class="visually-hidden">Опишите ваше сообщение подробно</small>
+                            <textarea id="message" name="message" rows="5" required
+                                      aria-describedby="message-hint"
+                                      placeholder="Опишите ваше сообщение..."></textarea>
+                            <small id="message-hint" class="form-hint">Минимум 10 символов</small>
                             <span class="error-message" id="messageError"></span>
                         </div>
 
-                        <button type="submit" class="btn">Отправить сообщение</button>
+                        <button type="submit" class="btn btn-submit">Отправить сообщение</button>
                     </form>
 
                     <div class="contact-info">
                         <h3>Контакты:</h3>
                         <div class="contact-item">
-                            <span class="contact-icon">☒</span>
+                            <span class="contact-icon">📧</span>
                             <span>gialde307@gmail.com</span>
                         </div>
                         <div class="contact-item">
-                            <span class="contact-icon">☐</span>
+                            <span class="contact-icon">💻</span>
                             <span>GitHub: gialde</span>
                         </div>
                         <div class="contact-item">
-                            <span class="contact-icon">♀</span>
+                            <span class="contact-icon">📍</span>
                             <span>Москва, Россия</span>
                         </div>
                     </div>
