@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебный дневник</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                [ЛОГОТИП]
+                <span>Кондратенко Денис</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><a href="projects.html">Проекты</a></li>
+                    <li><a href="diary.html">Дневник</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="diary">
+            <div class="container">
+                <h1>Мой учебный прогресс</h1>
+                
+                <div class="diary-content">
+                    <div class="progress-log">
+                        <h2>История обучения</h2>
+                        <div class="timeline">
+                            <div class="timeline-item completed">
+                                <span class="date">15 дек</span>
+                                <span class="task">Верстка макета сайта</span>
+                                <span class="status">✓</span>
+                            </div>
+                            <div class="timeline-item completed">
+                                <span class="date">10 дек</span>
+                                <span class="task">JavaScript основы</span>
+                                <span class="status">✓</span>
+                            </div>
+                            <div class="timeline-item in-progress">
+                                <span class="date">05 дек</span>
+                                <span class="task">Работа с формами</span>
+                                <span class="status">⟳</span>
+                            </div>
+                            <div class="timeline-item in-progress">
+                                <span class="date">01 дек</span>
+                                <span class="task">Адаптивный дизайн</span>
+                                <span class="status">⟳</span>
+                            </div>
+                        </div>
+
+                        <button class="btn" id="addEntryBtn">Добавить запись</button>
+                    </div>
+
+                    <div class="current-courses">
+                        <h2>Текущие курсы</h2>
+                        <div class="course-progress">
+                            <div class="course">
+                                <span>Веб-разработка</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 90%;">90%</div>
+                                </div>
+                            </div>
+                            <div class="course">
+                                <span>JavaScript</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 70%;">70%</div>
+                                </div>
+                            </div>
+                            <div class="course">
+                                <span>React</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 50%;">50%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Модальное окно добавления записи -->
+        <div id="addEntryModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Добавить запись в дневник</h2>
+                <form id="diaryForm">
+                    <input type="date" id="entryDate" required>
+                    <input type="text" id="entryTask" placeholder="Задача" required>
+                    <select id="entryStatus" required>
+                        <option value="completed">Завершено</option>
+                        <option value="in-progress">В процессе</option>
+                        <option value="planned">Запланировано</option>
+                    </select>
+                    <button type="submit" class="btn">Добавить</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Контакты</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/diary.js"></script>
+</body>
+</html>
