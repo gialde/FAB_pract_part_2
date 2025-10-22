@@ -2,18 +2,20 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Контакты</title>
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
-<body>
-    <header>
+<body class="page">
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+    
+    <header class="nav">
         <div class="container">
             <div class="logo">
-                [ЛОГОТИП]
+                W
                 <span>Кондратенко Денис</span>
             </div>
-            <nav>
+            <nav aria-label="Основная навигация">
                 <ul>
                     <li><a href="../index.html">Главная</a></li>
                     <li><a href="projects.html">Проекты</a></li>
@@ -24,28 +26,31 @@
         </div>
     </header>
 
-    <main>
+    <main id="main">
         <section class="contacts">
             <div class="container">
-                <h1>Свяжитесь со мной</h1>
+                <h1 class="section-title">Свяжитесь со мной</h1>
                 
                 <div class="contact-content">
                     <form class="contact-form" id="contactForm">
                         <div class="form-group">
                             <label for="name">Имя:</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" required aria-describedby="name-hint">
+                            <small id="name-hint" class="visually-hidden">Введите ваше полное имя</small>
                             <span class="error-message" id="nameError"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" required aria-describedby="email-hint">
+                            <small id="email-hint" class="visually-hidden">Мы пришлём ответ на этот адрес</small>
                             <span class="error-message" id="emailError"></span>
                         </div>
 
                         <div class="form-group">
                             <label for="message">Сообщение:</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <textarea id="message" name="message" rows="5" required aria-describedby="message-hint"></textarea>
+                            <small id="message-hint" class="visually-hidden">Опишите ваше сообщение подробно</small>
                             <span class="error-message" id="messageError"></span>
                         </div>
 
@@ -72,7 +77,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
             <p>© 2025 Контакты</p>
         </div>

@@ -2,18 +2,20 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Учебный дневник</title>
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
-<body>
-    <header>
+<body class="page">
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+    
+    <header class="nav">
         <div class="container">
             <div class="logo">
-                [ЛОГОТИП]
+                W
                 <span>Кондратенко Денис</span>
             </div>
-            <nav>
+            <nav aria-label="Основная навигация">
                 <ul>
                     <li><a href="../index.html">Главная</a></li>
                     <li><a href="projects.html">Проекты</a></li>
@@ -24,10 +26,10 @@
         </div>
     </header>
 
-    <main>
+    <main id="main">
         <section class="diary">
             <div class="container">
-                <h1>Мой учебный прогресс</h1>
+                <h1 class="section-title">Мой учебный прогресс</h1>
                 
                 <div class="diary-content">
                     <div class="progress-log">
@@ -91,20 +93,29 @@
                 <span class="close">&times;</span>
                 <h2>Добавить запись в дневник</h2>
                 <form id="diaryForm">
-                    <input type="date" id="entryDate" required>
-                    <input type="text" id="entryTask" placeholder="Задача" required>
-                    <select id="entryStatus" required>
-                        <option value="completed">Завершено</option>
-                        <option value="in-progress">В процессе</option>
-                        <option value="planned">Запланировано</option>
-                    </select>
+                    <div class="form-group">
+                        <label for="entryDate">Дата:</label>
+                        <input type="date" id="entryDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="entryTask">Задача:</label>
+                        <input type="text" id="entryTask" placeholder="Задача" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="entryStatus">Статус:</label>
+                        <select id="entryStatus" required>
+                            <option value="completed">Завершено</option>
+                            <option value="in-progress">В процессе</option>
+                            <option value="planned">Запланировано</option>
+                        </select>
+                    </div>
                     <button type="submit" class="btn">Добавить</button>
                 </form>
             </div>
         </div>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
             <p>© 2025 Контакты</p>
         </div>

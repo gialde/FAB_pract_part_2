@@ -2,18 +2,20 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Мои проекты</title>
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
-<body>
-    <header>
+<body class="page">
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+    
+    <header class="nav">
         <div class="container">
             <div class="logo">
-                [ЛОГОТИП]
+                W
                 <span>Кондратенко Денис</span>
             </div>
-            <nav>
+            <nav aria-label="Основная навигация">
                 <ul>
                     <li><a href="../index.html">Главная</a></li>
                     <li><a href="projects.html">Проекты</a></li>
@@ -24,10 +26,10 @@
         </div>
     </header>
 
-    <main>
+    <main id="main">
         <section class="projects-page">
             <div class="container">
-                <h1>Мои проекты</h1>
+                <h1 class="section-title">Мои проекты</h1>
                 
                 <div class="filter-buttons">
                     <button class="filter-btn active" data-filter="all">Все</button>
@@ -36,33 +38,35 @@
                     <button class="filter-btn" data-filter="react">React</button>
                 </div>
 
-                <div class="projects-grid-full">
-                    <div class="project-card-full" data-category="html">
-                        <div class="project-image"></div>
-                        <h3>Личный сайт</h3>
-                        <p class="project-tech">HTML, CSS</p>
-                        <button class="project-details-btn">Подробнее</button>
-                    </div>
+                <div class="projects-area">
+                    <div class="projects-grid-full">
+                        <div class="project-card-full" data-category="html">
+                            <div class="project-image"></div>
+                            <h3>Личный сайт</h3>
+                            <p class="project-tech">HTML, CSS</p>
+                            <button class="project-details-btn">Подробнее</button>
+                        </div>
 
-                    <div class="project-card-full" data-category="js">
-                        <div class="project-image"></div>
-                        <h3>Todo-приложение</h3>
-                        <p class="project-tech">JavaScript</p>
-                        <button class="project-details-btn">Подробнее</button>
-                    </div>
+                        <div class="project-card-full" data-category="js">
+                            <div class="project-image"></div>
+                            <h3>Todo-приложение</h3>
+                            <p class="project-tech">JavaScript</p>
+                            <button class="project-details-btn">Подробнее</button>
+                        </div>
 
-                    <div class="project-card-full" data-category="react">
-                        <div class="project-image"></div>
-                        <h3>Интернет-магазин</h3>
-                        <p class="project-tech">React</p>
-                        <button class="project-details-btn">Подробнее</button>
-                    </div>
+                        <div class="project-card-full" data-category="react">
+                            <div class="project-image"></div>
+                            <h3>Интернет-магазин</h3>
+                            <p class="project-tech">React</p>
+                            <button class="project-details-btn">Подробнее</button>
+                        </div>
 
-                    <div class="project-card-full" data-category="html">
-                        <div class="project-image"></div>
-                        <h3>Портфолио</h3>
-                        <p class="project-tech">Bootstrap</p>
-                        <button class="project-details-btn">Подробнее</button>
+                        <div class="project-card-full" data-category="html">
+                            <div class="project-image"></div>
+                            <h3>Портфолио</h3>
+                            <p class="project-tech">Bootstrap</p>
+                            <button class="project-details-btn">Подробнее</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -89,7 +93,7 @@
         </div>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
             <p>© 2025 Контакты</p>
         </div>
