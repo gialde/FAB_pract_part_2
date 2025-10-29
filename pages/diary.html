@@ -7,19 +7,22 @@
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body class="page">
-    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
     
     <header class="nav">
         <div class="container">
             <div class="logo">
-                W
+                <picture>
+                    <source srcset="../images/logo.webp" type="image/webp">
+                    <img src="../images/logo.png" alt="Логотип" width="40" height="40" class="logo-img">
+                </picture>
                 <span>Кондратенко Денис</span>
             </div>
             <nav aria-label="Основная навигация">
                 <ul>
                     <li><a href="../index.html">Главная</a></li>
                     <li><a href="projects.html">Проекты</a></li>
-                    <li><a href="diary.html">Дневник</a></li>
+                    <li><a href="diary.html" class="active">Дневник</a></li>
                     <li><a href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
@@ -104,13 +107,38 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
+
+
+                                <!-- Модальное окно -->
+                <div id="addEntryModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Добавить новую запись</h2>
+                        <form id="diaryForm">
+                            <div class="form-group">
+                                <label for="entryDate">Дата</label>
+                                <input type="date" id="entryDate" name="entryDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="entryTask">Задача</label>
+                                <input type="text" id="entryTask" name="entryTask" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="entryStatus">Статус</label>
+                                <select id="entryStatus" name="entryStatus">
+                                    <option value="completed">Завершено</option>
+                                    <option value="in-progress">В процессе</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn">Добавить запись</button>
+                        </form>
+                    </div>
+                </div>
+
 
     <footer class="footer">
         <div class="container">
-            <p>© 2025 Контакты</p>
+            <p>© 2025 Учебный дневник</p>
         </div>
     </footer>
 

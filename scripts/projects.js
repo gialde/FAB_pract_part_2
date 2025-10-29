@@ -1,32 +1,41 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('projectModal');
+    const closeBtn = modal.querySelector('.close');
     const projectCards = document.querySelectorAll('.project-card');
-    
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Убираем активный класс у всех кнопок
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            // Добавляем активный класс текущей кнопке
-            this.classList.add('active');
-            
-            const filter = this.getAttribute('data-filter');
-            
-            // Показываем/скрываем карточки в зависимости от фильтра
-            projectCards.forEach(card => {
-                if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
+    const modalTitle = document.getElementById('modalTitle');
+    const modalTech = document.getElementById('modalTech');
+    const modalDescription = document.getElementById('modalDescription');
+
+    // --- Модальное окно ---
+    projectCards.forEach(card => {
+        const detailsBtn = card.querySelector('.project-details-btn');
+        detailsBtn.addEventListener('click', () => {
+            modal.classList.add('show');
+            modalTitle.textContent = card.querySelector('.project-title').textContent;
+            modalTech.textContent = "Технологии: " + card.querySelector('.project-tech').textContent;
+            modalDescription.textContent = card.querySelector('.project-description').textContent;
         });
     });
-    
-    // Обработчик для кнопок "Подробнее"
-    document.querySelectorAll('.project-details-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const projectTitle = this.closest('.project-card').querySelector('.project-title').textContent;
-            alert(`Подробная информация о проекте: ${projectTitle}`);
+
+    closeBtn.addEventListener('click', () => modal.classList.remove('show'));
+    window.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('show'); });
+
+    // --- Фильтрация проектов с плавностью ---
+    const filterBtns = document.querySelectorAll('.filter-btn');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.dataset.filter;
+            projectCards.forEach(card => {
+                if (filter === 'all' || card.dataset.category === filter) {
+                    card.classList.remove('hide');
+                } else {
+                    card.classList.add('hide');
+                }
+            });
         });
     });
 });

@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body class="page">
-    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
     
     <header class="nav">
         <div class="container">
@@ -31,6 +30,7 @@
             <div class="container">
                 <h1 class="section-title">Мои проекты</h1>
                 
+                <!-- Фильтры -->
                 <div class="filter-buttons">
                     <button class="filter-btn active" data-filter="all">Все</button>
                     <button class="filter-btn" data-filter="web">Веб-разработка</button>
@@ -38,6 +38,7 @@
                     <button class="filter-btn" data-filter="react">React</button>
                 </div>
 
+                <!-- Галерея проектов -->
                 <div class="projects-area">
                     <div class="projects-gallery">
                         <article class="project-card" data-category="web">
@@ -100,6 +101,16 @@
             </div>
         </section>
     </main>
+
+    <!-- Модальное окно проекта -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalTech"></p>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="container">

@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>Личный сайт студента</title>
+    <title>Кондратенко Денис — Веб-разработчик</title>
+    <meta name="description" content="Портфолио студента Кондратенко Денис, веб-разработка: HTML, CSS, JavaScript, React. Лучшие проекты и навыки.">
     <link rel="stylesheet" href="styles/styles.css">
+    <!-- Preload ключевых изображений -->
+    <link rel="preload" as="image" href="images/hero-mobile.jpg">
 </head>
 <body class="page">
-    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
-    
+
     <header class="nav">
         <div class="container">
             <div class="logo">
                 <picture>
                     <source srcset="images/logo.webp" type="image/webp">
-                    <source srcset="images/logo.png" type="image/png">
-                    <img src="images/logo.png" alt="Логотип" width="40" height="40" class="logo-img">
+                    <img src="images/logo.png" alt="Логотип Кондратенко Денис" width="40" height="40" class="logo-img">
                 </picture>
                 <span>Кондратенко Денис</span>
             </div>
@@ -31,10 +32,11 @@
     </header>
 
     <main id="main">
+        <!-- Hero -->
         <section class="hero">
             <div class="container">
                 <div class="hero-text">
-                    <h1 class="hero-greeting">Привет! Я студент<br>группы ЭФБО-13-24</h1>
+                    <h1>Привет! Я студент<br>группы ЭФБО-13-24</h1>
                     <p>Увлекаюсь веб-разработкой</p>
                     <a href="assets/resume.pdf" class="btn" download>Скачать резюме</a>
                 </div>
@@ -43,8 +45,6 @@
                         <source media="(min-width: 1200px)" srcset="images/hero-desktop.webp" type="image/webp">
                         <source media="(min-width: 768px)" srcset="images/hero-tablet.webp" type="image/webp">
                         <source srcset="images/hero-mobile.webp" type="image/webp">
-                        <source media="(min-width: 1200px)" srcset="images/hero-desktop.jpg">
-                        <source media="(min-width: 768px)" srcset="images/hero-tablet.jpg">
                         <img src="images/hero-mobile.jpg" 
                              alt="Портрет Кондратенко Денис" 
                              class="hero-photo"
@@ -56,7 +56,8 @@
             </div>
         </section>
 
-        <section class="skills">
+        <!-- Навыки -->
+        <section class="skills" aria-label="Навыки">
             <div class="container">
                 <h2 class="section-title">Мои навыки</h2>
                 <div class="skill">
@@ -78,31 +79,32 @@
             </div>
         </section>
 
-        <section class="projects-preview">
+        <!-- Лучшие проекты -->
+        <section class="projects-preview" aria-label="Лучшие проекты">
             <div class="container">
                 <h2 class="section-title">Лучшие проекты</h2>
-                <div class="projects-preview-grid">
-                    <div class="project-card">
+                <div class="projects-gallery">
+                    <article class="project-card">
                         <picture>
                             <source srcset="images/project1.webp" type="image/webp">
-                            <img src="images/project1.jpg" alt="Проект 1" class="project-img" loading="lazy">
+                            <img src="images/project1.jpg" alt="Личный сайт" class="project-img" loading="lazy">
                         </picture>
                         <h3>Личный сайт</h3>
-                    </div>
-                    <div class="project-card">
+                    </article>
+                    <article class="project-card">
                         <picture>
                             <source srcset="images/project2.webp" type="image/webp">
-                            <img src="images/project2.jpg" alt="Проект 2" class="project-img" loading="lazy">
+                            <img src="images/project2.jpg" alt="Todo-приложение" class="project-img" loading="lazy">
                         </picture>
                         <h3>Todo-приложение</h3>
-                    </div>
-                    <div class="project-card">
+                    </article>
+                    <article class="project-card">
                         <picture>
                             <source srcset="images/project3.webp" type="image/webp">
-                            <img src="images/project3.jpg" alt="Проект 3" class="project-img" loading="lazy">
+                            <img src="images/project3.jpg" alt="Интернет-магазин" class="project-img" loading="lazy">
                         </picture>
                         <h3>Интернет-магазин</h3>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -110,8 +112,10 @@
 
     <footer class="footer">
         <div class="container">
-            <p>© 2025 Контакты</p>
+            <p>© 2025 Кондратенко Денис</p>
         </div>
     </footer>
+
+    <script src="scripts/main.min.js" defer></script>
 </body>
 </html>
